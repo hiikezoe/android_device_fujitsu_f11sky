@@ -1,0 +1,2 @@
+system/extsd/extsd.ko
+sbin/nvdrv.ko
