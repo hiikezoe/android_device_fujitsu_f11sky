@@ -1,0 +1,6 @@
+on boot
+    insmod /modules/extsd.ko
+    insmod /modules/nvdrv.ko
+    mknod /dev/nvdrv c 120 0
+    chmod 666 /dev/nvdrv
+    insmod /modules/nv_write.ko
