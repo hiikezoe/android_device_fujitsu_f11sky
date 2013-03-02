@@ -11,7 +11,9 @@ DEVICE_PACKAGE_OVERLAYS += device/fujitsu/f11sky/overlay
 PRODUCT_COPY_FILES += \
         device/fujitsu/f11sky/root/init.f11sky.rc:root/init.f11sky.rc \
         device/fujitsu/f11sky/root/init.f11sky.sh:root/init.f11sky.sh \
-        device/fujitsu/f11sky/root/ueventd.f11sky.rc:root/ueventd.f11sky.rc
+        device/fujitsu/f11sky/root/ueventd.f11sky.rc:root/ueventd.f11sky.rc \
+        device/fujitsu/f11sky/root/modules/extsd.ko:root/modules/extsd.ko
+        device/fujitsu/f11sky/root/modules/nvdrv.ko:root/modules/nvdrv.ko
 
 LOCAL_PATH := device/fujitsu/f11sky
 ifeq ($(TARGET_PREBUILT_KERNEL),)

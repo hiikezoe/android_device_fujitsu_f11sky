@@ -33,7 +33,7 @@ on boot-pause
 
 on boot
 #/* FUJITSU:2011/07/19 add for Sky-SDCC start */
-    insmod /system/extsd/extsd.ko
+    insmod /modules/extsd.ko
 #/* FUJITSU:2011/07/19 add for Sky-SDCC end */
     mkdir /data/misc/bluetooth 0770 bluetooth bluetooth
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
@@ -97,7 +97,7 @@ on boot
     mkdir /data/recovery 0666 system system
 
 # 2011-07-13 KOUTEI start
-    insmod /sbin/nvdrv.ko
+    insmod /modules/nvdrv.ko
     mknod /dev/nvdrv c 120 0
     chmod 666 /dev/nvdrv
 # 2011-07-13 KOUTEI end
