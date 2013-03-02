@@ -7,6 +7,12 @@ $(call inherit-product-if-exists, vendor/fujitsu/f11sky/f11sky-vendor.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/fujitsu/f11sky/overlay
 
+# Init files in initramfs
+PRODUCT_COPY_FILES += \
+        device/fujitsu/f11sky/root/init.f11sky.rc:root/init.f11sky.rc \
+        device/fujitsu/f11sky/root/init.f11sky.sh:root/init.f11sky.sh \
+        device/fujitsu/f11sky/root/ueventd.f11sky.rc:root/ueventd.f11sky.rc
+
 LOCAL_PATH := device/fujitsu/f11sky
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 	LOCAL_KERNEL := $(LOCAL_PATH)/kernel
